@@ -1,0 +1,18 @@
+EXPORTS
+	tp_chan_get_interface @ 1 NONAME
+	tp_chan_new @ 2 NONAME
+	tp_conn_get_interface @ 3 NONAME
+	tp_conn_get_type @ 4 NONAME
+	tp_conn_new_channel @ 5 NONAME
+	tp_connmgr_get_parameters @ 6 NONAME
+	tp_connmgr_list_protocols @ 7 NONAME
+	tp_connmgr_new @ 8 NONAME
+	tp_connmgr_new_connection @ 9 NONAME
+	tp_get_chan_contactsearch_interface @ 10 NONAME
+	tp_get_chan_group_interface @ 11 NONAME
+	tp_get_chan_text_interface @ 12 NONAME
+	tp_get_conn_avatar_interface @ 13 NONAME
+	tp_get_conn_presence_interface @ 14 NONAME
+	tp_get_props_interface @ 15 NONAME
+	tp_props_iface_get_type @ 16 NONAME
+

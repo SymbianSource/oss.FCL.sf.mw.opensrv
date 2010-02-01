@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.freedesktop.Telepathy.ConnectionManager.gabble
+Exec=\\epoc32\\RELEASE\\winscw\\udeb\\tg.exe

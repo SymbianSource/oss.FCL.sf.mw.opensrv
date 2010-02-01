@@ -1,0 +1,130 @@
+/*
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * Copyright (C) 2006 Collabora Ltd.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ */
+
+#include<platform_paths.hrh>
+TARGET              loudmouth.dll
+TARGETTYPE          DLL
+UID                 0x1000008d  0x2000F851	
+
+VERSION      10.1
+#ifdef EKA2
+LANG                SC
+CAPABILITY          All -TCB
+VENDORID            VID_DEFAULT
+
+#endif
+
+#if !defined(__WINSCW__) && !defined(__WINS__)
+EpocAllowDllData
+#endif
+
+MACRO               SYMBIAN
+MACRO               HAVE_CONFIG_H
+
+MACRO               LM_COMPILATION
+
+MACRO								USE_TCP_KEEPALIVES
+#ifdef WINSCW
+MACRO			EMULATOR
+#endif
+
+#ifndef WINSCW
+#define LM_NO_DEBUG
+#endif
+
+
+//EXPORTUNFROZEN
+
+USERINCLUDE         ../inc
+USERINCLUDE         ../inc/loudmouth
+
+SYSTEMINCLUDE       ../inc
+SYSTEMINCLUDE       /epoc32/include
+
+OS_LAYER_LIBC_SYSTEMINCLUDE
+OS_LAYER_GLIB_SYSTEMINCLUDE
+OS_LAYER_SSL_SYSTEMINCLUDE
+OS_LAYER_STDCPP_SYSTEMINCLUDE
+OS_LAYER_BOOST_SYSTEMINCLUDE
+OS_LAYER_DBUS_SYSTEMINCLUDE
+OS_LAYER_LIBUTILITY_SYSTEMINCLUDE
+
+//#endif
+
+
+
+/* Loudmouth source files */
+SOURCEPATH          ../src
+
+SOURCE              lm-connection.c
+SOURCE              lm-debug.c
+SOURCE              lm-error.c
+SOURCE              lm-message.c 
+SOURCE              lm-message-handler.c
+SOURCE              lm-message-node.c
+SOURCE              lm-parser.c
+SOURCE              lm-proxy.c
+SOURCE              lm-sha.c
+SOURCE              lm-sock.c
+SOURCE              lm-ssl-base.c
+SOURCE              lm-ssl-generic.c
+SOURCE              lm-ssl-gnutls.c
+SOURCE              lm-ssl-openssl.c
+SOURCE              lm-utils.c
+SOURCE              lm-socket.c
+SOURCE              lm-message-queue.c
+SOURCE              lm-sasl.c
+SOURCE              lm-misc.c
+SOURCE              md5.c
+SOURCE              base64.c
+#ifdef WINSCW
+SOURCE		libloudmouth_wsd.cpp
+#endif
+
+         
+
+LIBRARY             libc.lib
+LIBRARY             libpthread.lib
+
+LIBRARY             libglib.lib
+LIBRARY             glibbackend.lib
+LIBRARY             libgmodule.lib
+LIBRARY             libgobject.lib
+LIBRARY				libgthread.lib
+
+LIBRARY             libssl.lib
+LIBRARY             libcrypto.lib
+//LIBRARY             libresolv.lib
+//LIBRARY             libglib.lib
+#ifdef WINSCW
+//wsd solution
+LIBRARY		ewsd.lib
+LIBRARY             euser.lib
+#endif
+      
+
+/*
+#if defined(ARMCC)
+deffile ../eabi/ 
+#elif defined(WINSCW)
+deffile ../bwinscw/ 
+#endif
+*/
+
+//VENDORID VID_DEFAULT 
+

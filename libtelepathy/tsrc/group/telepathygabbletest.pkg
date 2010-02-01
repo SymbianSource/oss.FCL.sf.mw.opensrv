@@ -1,0 +1,34 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  telepathygabbletest.pkg
+;
+&EN
+
+;Header
+#{"telepathygabbletest"}, (0x101FB3E5), 1, 0, 0, TYPE=SA
+
+
+;Localised VendorID
+%{"Nokia"}
+
+;VendorID
+:"Nokia"
+
+(0x101F7961), 0, 0, 0, {"Series60ProductID"}
+
+;CFG File
+"\epoc32\winscw\c\testframework\telepathygabbletest.cfg"    - "c:\testframework\telepathygabbletest.cfg"
+
+;test dll
+"\EPOC32\RELEASE\ARMV5\urel\telepathygabbletest.dll"-"!:\sys\bin\telepathygabbletest.dll"
