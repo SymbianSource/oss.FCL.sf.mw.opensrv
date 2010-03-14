@@ -15,24 +15,31 @@
 *
 */
 
-// Project configuration file for dbus
 
-// Project platforms
 PRJ_PLATFORMS
-WINSCW ARMV5
+// specify the platforms your component needs to be built for here
+// defaults to WINS MARM so you can ignore this if you just build these
+	
+	DEFAULT
+
+PRJ_TESTEXPORTS
+// NOTE: If using ARS requirements all export operations should be done under this.
+// 'abld test export'
+
+PRJ_EXPORTS
 
 
-// Project exports
-PRJ_EXPORTS 
+	
 
-// MMP files for project components
+
 PRJ_MMPFILES
-#include "../opensrv_plat/group/bld.inf"
-#include "../loudmouth/group/bld.inf"
-#include "../libtelepathy/group/bld.inf"
-#include "../telepathygabble/group/bld.inf"
-#include "../isolationserver/group/bld.inf"
-
 
 PRJ_TESTMMPFILES
+#include "../../opensrv_plat/messagequeue_api/tsrc/group/bld.inf"
+	
+	
+	
 
+
+
+//  End of File
