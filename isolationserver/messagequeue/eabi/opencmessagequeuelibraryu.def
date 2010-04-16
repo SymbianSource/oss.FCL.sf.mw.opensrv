@@ -1,9 +1,0 @@
-EXPORTS
-	MsgQCheck @ 1 NONAME
-	MsgQClean @ 2 NONAME
-	MsgQCreate @ 3 NONAME
-	MsgQDelete @ 4 NONAME
-	MsgQMaxCheck @ 5 NONAME
-	MsgQReceive @ 6 NONAME
-	MsgQSend @ 7 NONAME
-

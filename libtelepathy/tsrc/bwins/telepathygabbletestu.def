@@ -1,7 +1,0 @@
-EXPORTS
-	?LibEntryL@@YAPAVCScriptBase@@AAVCTestModuleIf@@@Z @ 1 NONAME ; class CScriptBase * LibEntryL(class CTestModuleIf &)
-	tp_chan_type_text_send_async @ 2 NONAME
-	tp_chan_type_search_async @ 3 NONAME
-	tp_chan_type_search_get_search_keys_async @ 4 NONAME
-	tp_chan_type_search_get_search_state_async @ 5 NONAME
-
